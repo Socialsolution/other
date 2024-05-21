@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joint Venture</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Playfair+Display:wght@700&family=Montserrat:wght@600&family=Oswald:wght@400&display=swap');
+        body {
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #FEF4E8, #959D8D);
+            color: #333;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .overlay {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .overlay h1 {
+            margin: 0;
+            font-size: 4em;
+            color: #333;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            position: relative;
+            text-shadow: 1px 1px 2px #999, 2px 2px 5px #ffd1dc, 3px 3px 10px #ffd1dc;
+        }
+
+        .overlay h1::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120%;
+            height: 10px;
+            background: #ffd1dc;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            box-shadow: 0 0 20px 5px #ffd1dc;
+        }
+
+        .overlay p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+            color: #666666;
+            font-style: italic;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+        }
+
+        .left,
+        .right {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .left {
+            background: #E3E2DD;
+            color: #333;
+        }
+
+        .right {
+            background: #FEF4E8;
+            color: #fff;
+        }
+
+        .left h1,
+        .right h1 {
+            font-size: 2.5em;
+            margin: 20px 0;
+            font-family: 'Oswald', sans-serif;
+            text-shadow: 1px 1px 0 #999, 2px 2px 0 #888;
+        }
+
+        .right h1 {
+            color: #959D8D;
+            /* Updated color for Credible Experienced Leadership */
+        }
+
+        .left p,
+        .right p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        .photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .photo-left {
+            border: 5px solid #000;
+        }
+
+        .photo-right {
+            border: 5px solid #ffd1dc;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .photo:hover {
+            transform: scale(1.05);
+        }
+
+        .photo-text,
+        .photo-text-white {
+            font-size: 0.8em;
+            text-align: center;
+            margin-top: 5px;
+            font-family: 'Oswald', sans-serif;
+            color: #333;
+        }
+
+        .photo-text span,
+        .photo-text-white span {
+            display: block;
+        }
+
+        .photo-text {
+            color: #333;
+        }
+
+        .photo-text-white {
+            color: #333;
+        }
+
+        .blend {
+            display: none;
+        }
+
+        .middle-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #ffd1dc;
+            color: #2a2a2a;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .middle-button:hover {
+            background: #ff9aa2;
+            color: white;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .highlight {
+            color: #333;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .highlight-white {
+            color: #333;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .highlight-black {
+            color: #000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="overlay">
+            <h1>Social Solutions</h1>
+            <p>Social success comes with social problems. We have the solutions.</p>
+        </div>
+        <div class="content">
+            <div class="left">
+                <h1 class="highlight">Success Driven Agents and Assistants</h1>
+                <p class="highlight-white">Rachel has worked with Whitney along with 50-plus online and brick-and-mortar businesses, tasked with overseeing profitability and marketing impact. "The easiest path to personal growth is through helping others grow. I couldn't think
+                    of a more fulfilling business to be a part of."</p>
+                <a href="https://www.instagram.com/itsracheldobyns/" target="_blank">
+                    <div class="photo photo-left">
+                        <img src="Black close.png" alt="Profile Photo">
+                    </div>
+                </a>
+                <div class="photo-text">
+                    <span>Rachel Dobyns</span>
+                    <span>Co-Founder/ Agent Resource Director</span>
+                </div>
+            </div>
+            <div class="right">
+                <div class="photo-text-white highlight-black">
+                    <span>Whitneybartlette.social</span>
+                    <span>Co-Founder/ Creative Director</span>
+                </div>
+                <a href="https://www.instagram.com/whitneybartlette.social/" target="_blank">
+                    <div class="photo photo-right">
+                        <img src="whit closer.jpeg" alt="Course Image">
+                    </div>
+                </a>
+                <h1 class="highlight">Credible Experienced Leadership</h1>
+                <p class="highlight" style="color: #959D8D;">
+                    Unstoppable force, meet immovable object. Whitney Bartlette has been setting Instagram on FIRE, amassing nearly 800,000 followers in less than six months and accumulating hundreds of students with their own success stories through her course
+                    <a href="https://whitney-bartlette.mykajabi.com/viral-by-design" target="_blank" class="highlight-black">Viral by Design</a>. "I was constantly getting asked about solutions for people that just wanted help running their accounts.
+                    My hope is that we can build a network capable of filling the massive need for assistant and management services."
+                </p>
+            </div>
+        </div>
+        <a href="https://socialsolution.github.io/finder/" target="_blank">
+            <button class="middle-button">Solutions are a click away</button>
+        </a>
+    </div>
+</body>
+
+</html>
+
+
+
+
+</html>
