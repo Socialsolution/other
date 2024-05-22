@@ -10,16 +10,18 @@
         body {
             margin: 0;
             display: flex;
-            height: 100vh;
+            min-height: 100vh;
             font-family: 'Roboto', sans-serif;
             background: linear-gradient(135deg, #FEF4E8, #959D8D);
             color: #333;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
+            padding: 10px;
+            box-sizing: border-box;
         }
 
         .container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
             background: rgba(255, 255, 255, 0.9);
             border-radius: 15px;
@@ -29,6 +31,8 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
+            box-sizing: border-box;
+            margin-top: 20px;
         }
 
         .overlay {
@@ -39,7 +43,7 @@
 
         .overlay h1 {
             margin: 0;
-            font-size: 4em;
+            font-size: 2.5em;
             color: #333;
             font-family: 'Playfair Display', serif;
             letter-spacing: 1px;
@@ -62,23 +66,25 @@
 
         .overlay p {
             margin: 5px 0 0;
-            font-size: 1.2em;
+            font-size: 1em;
             color: #666666;
             font-style: italic;
         }
 
         .content {
             display: flex;
+            flex-direction: column;
             width: 100%;
         }
 
         .left,
         .right {
-            width: 50%;
+            width: 100%;
             padding: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
+            box-sizing: border-box;
         }
 
         .left {
@@ -93,26 +99,27 @@
 
         .left h1,
         .right h1 {
-            font-size: 2.5em;
+            font-size: 2em;
             margin: 20px 0;
             font-family: 'Oswald', sans-serif;
             text-shadow: 1px 1px 0 #999, 2px 2px 0 #888;
+            text-align: center;
         }
 
         .right h1 {
             color: #959D8D;
-            /* Updated color for Credible Experienced Leadership */
         }
 
         .left p,
         .right p {
-            font-size: 1.2em;
+            font-size: 1em;
             line-height: 1.6;
+            text-align: center;
         }
 
         .photo {
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             overflow: hidden;
             margin: 20px auto;
@@ -167,7 +174,7 @@
         .middle-button {
             margin-top: 20px;
             padding: 15px 30px;
-            font-size: 1.2em;
+            font-size: 1em;
             background: #ffd1dc;
             color: #2a2a2a;
             border: none;
@@ -197,6 +204,44 @@
         .highlight-black {
             color: #000;
         }
+
+        @media (min-width: 768px) {
+            .content {
+                flex-direction: row;
+            }
+
+            .left,
+            .right {
+                width: 50%;
+            }
+
+            .overlay h1 {
+                font-size: 4em;
+            }
+
+            .overlay p {
+                font-size: 1.2em;
+            }
+
+            .left h1,
+            .right h1 {
+                font-size: 2.5em;
+            }
+
+            .left p,
+            .right p {
+                font-size: 1.2em;
+            }
+
+            .photo {
+                width: 150px;
+                height: 150px;
+            }
+
+            .middle-button {
+                font-size: 1.2em;
+            }
+        }
     </style>
 </head>
 
@@ -209,8 +254,7 @@
         <div class="content">
             <div class="left">
                 <h1 class="highlight">Success Driven Agents and Assistants</h1>
-                <p class="highlight-white">Rachel has worked with Whitney along with 50-plus online and brick-and-mortar businesses, tasked with overseeing profitability and marketing impact. "The easiest path to personal growth is through helping others grow. I couldn't think
-                    of a more fulfilling business to be a part of."</p>
+                <p class="highlight-white">Rachel has worked with Whitney along with 50-plus online and brick-and-mortar businesses, tasked with overseeing profitability and marketing impact. "The easiest path to personal growth is through helping others grow. I couldn't think of a more fulfilling business to be a part of."</p>
                 <a href="https://www.instagram.com/itsracheldobyns/" target="_blank">
                     <div class="photo photo-left">
                         <img src="Black close.png" alt="Profile Photo">
@@ -234,8 +278,7 @@
                 <h1 class="highlight">Credible Experienced Leadership</h1>
                 <p class="highlight" style="color: #959D8D;">
                     Immovable object? meet Unstoppable force. Whitney Bartlette has been setting Instagram on FIRE, amassing nearly 800,000 followers in less than six months and accumulating hundreds of students with their own success stories through her course
-                    <a href="https://whitney-bartlette.mykajabi.com/viral-by-design" target="_blank" class="highlight-black">Viral by Design</a>. "I was constantly getting asked about solutions for people that just wanted help running their accounts.
-                    My hope is that we can build a network capable of filling the massive need for assistant and management services."
+                    <a href="https://whitney-bartlette.mykajabi.com/viral-by-design" target="_blank" class="highlight-black">Viral by Design</a>. "I was constantly getting asked about solutions for people that just wanted help running their accounts. My hope is that we can build a network capable of filling the massive need for assistant and management services."
                 </p>
             </div>
         </div>
@@ -247,7 +290,3 @@
 
 </html>
 
-
-
-
-</html>
